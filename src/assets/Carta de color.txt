@@ -1,0 +1,3 @@
+Amarillo	#eded12
+Cyan			#00ace5
+Azul			#00519e

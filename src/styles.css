@@ -1,1 +1,323 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+:root {
+    --tema-color-fondo: var(--tema-cian-color-fondo);
+    --tema-color-relleno1: var(--tema-cian-color-relleno1);
+    --tema-color-relleno2: var(--tema-cian-color-relleno2);
+    --tema-color-h1: var(--tema-cian-color-h1);
+    --tema-color-header: var(--tema-cian-color-header);
+    --tema-color-p: var(--tema-cian-color-p);
+    --tema-color-code: var(--tema-cian-color-code);
+    --tema-color-inline-code: var(--tema-cian-color-inline-code);
+
+    --tema-cian-color-fondo: linear-gradient(to right bottom, #23b33b, #1e4bad);
+    --tema-cian-color-relleno1: #000000AA;
+    --tema-cian-color-relleno2: #777777;
+    --tema-cian-color-h1: #ffffff;
+    --tema-cian-color-header: #ffffff;
+    --tema-cian-color-p: #ffffff;
+    --tema-cian-color-code: #260131AA;
+    --tema-cian-color-inline-code: #777777;
+}
+
+html {
+    font-size: 10px;
+    background: var(--tema-cian-color-fondo);
+    background-attachment: fixed;
+}
+
+#navbar {
+    /* ########################### */
+     /* display: block; ############ */
+    /* ########################### */
+    position: fixed;
+    min-width: 250pt;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100vh;
+    background: #1115;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--tema-color-p);
+    padding: 0;
+}
+
+#navbar header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+}
+
+#navbar header a {
+    padding: 0;
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#navbar header a:hover {
+    content: "4$1L0$";
+}
+
+#navbar ul {
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    overflow: auto;
+}
+
+#navbar li {
+    font-size: 2em;
+    color: var(--tema-color-p);
+    list-style: none;
+    background: #fff2;
+    margin: 0.25em 0;
+    padding: 0.5em;
+    /* text-align: center; */
+}
+
+#navbar li:hover {
+    background: #fff5;
+}
+
+#navbar a {
+    display: block;
+    width: 100%;
+    color: var(--tema-color-p);
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+}
+
+body {
+    min-width: 100pt;
+    max-width: 600pt;
+    margin: auto;
+    padding-left: 250pt;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50pt;
+    text-align: center;
+    padding: 1em 0.5em;
+    color: var(--tema-color-h1);
+    text-shadow: 0.05em 0.05em 0.05em #0007;
+    border: 0.1em solid var(--tema-color-h1);
+    border-radius: 1em;
+    margin-top: -2em;
+    padding-top: 3em;
+}
+
+h1 .subtítulo {
+    display: block;
+    font-size: 0.5em;
+    font-weight: 200;
+}
+
+#Old-Tux {
+    display: block;
+    width: 25%;
+    height: auto;
+    align-self: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background: var(--tema-color-relleno1);
+    margin: 2em 1em;
+    border-radius: 2em;
+    font-family: "Segoe UI";
+    font-size: 1.5em;
+}
+
+section::before {
+    display: block;
+    content: "";
+    margin-top: -10em;
+    padding-top: 10em;
+}
+
+section header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: var(--tema-color-header);
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+section p, section li {
+    margin:0;
+    color: var(--tema-color-p);
+    font-size: 1.1em;
+    margin: 0.7em 0;
+    /* padding: 0.5em 0em; */
+}
+
+section p.problema{
+    background-color: rgba(212, 60, 60, 0.8);
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+section div.problema::before {
+    display: block;
+    content: "Problema";
+    font-size: 1.5em;
+    background: none;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(212, 60, 60, 1);
+    /* padding-bottom: 0;
+    margin-bottom: 0; */
+}
+
+section div.solución::before {
+    display: block;
+    margin: 1em 0 0 0;
+    content: "Solución";
+    font-size: 1.5em;
+    background: none;
+    text-align: center;
+    color: rgb(128, 216, 128);
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    border-bottom: 0.1em solid rgb(128, 216, 128);
+}
+
+section span.ruta {
+    font-family: monospace;
+    color: rgb(255, 143, 38);
+}
+
+section code {
+    display: inline;
+    border: none;
+    margin: 0.25em;
+    padding: 0.25em;
+    font-family: monospace;
+    border-radius: 0.5em;
+    color: var(--tema-color-p);
+}
+
+
+section code.bloque {
+    display: block;
+    margin: 0.5em 0;
+    width: auto;
+    padding: 0.5em;
+    background: var(--tema-color-code);
+    border: 1px solid var(--tema-color-p);
+    overflow: auto;
+}
+
+section p.fuentes {
+    width: auto;
+    font-style: italic;
+    background: #fff5;
+    border-radius: 0.5em;
+    padding: 0.2em 1em;
+    margin-top: 1em;
+    overflow: auto;
+}
+
+section p.fuentes::before {
+    content: "Fuente: ";
+    font-weight: bold;
+}
+
+div.etiquetas {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5em 0;
+    justify-content: space-between;
+    background: #0008;
+    border-radius: 0.5em;
+    padding: 0.2em 1em;
+}
+
+section p.etiqueta {
+    font-weight: 200;
+    color: var(--tema-color-p);
+    margin: 0;
+}
+
+section p.etiqueta::before{
+    content: "#";
+}
+
+section p.etiqueta:hover {
+    color: rgb(116, 255, 255);
+}
+
+@media only screen and (min-width: 500pt) {
+    #navbar {
+        position: fixed;
+        min-width: 250pt;
+        top: 0px;
+        left: 0px;
+        width: 300px;
+        height: 100vh;
+        background: #1115;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--tema-color-p);
+        padding: 0;
+    }
+}
+
+@media (max-width: 500pt) {
+    body {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #navbar {
+        position: absolute;
+        min-width: 250pt;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 30vh;
+        background: #1115;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--tema-color-p);
+        padding: 0;
+        border-bottom: 1em solid #1115
+    }
+
+    #navbar header {
+        font-size: 0.5em;
+    }
+
+    main {
+        width: 100%;
+        height: 70vh;
+        margin: 0;
+        padding: 30vh 0 0 0;
+    }
+
+    h1 {
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+    section div.etiquetas {
+        flex-direction: column;
+    }
+    
+    section p.etiqueta {
+        padding: 0 1em;
+        text-align: center;
+    }
+}

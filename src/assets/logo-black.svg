@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" x="0" y="0" version="1.1" viewBox="0 0 904 448" xml:space="preserve"><style>.st0{fill:#000}</style><path d="M332 108v-1-1h-1a1 1 0 000-1L178 18h-3L24 105l-1 1-1 1v234l2 3 151 87v1a3 3 0 003 0l152-88 1-3v-57-1-1h-1v-1l-50-29h-3l-100 57-48-27V168l47-27 98 57a3 3 0 004 1l52-30c2 0 2-1 2-2v-59zM180 85l94 54-1 51-93-54V85zm-3-61l145 84-44 25-100-57h-2-1l-99 58-44-26 145-84zM29 114l44 25v176h1v1l99 57v50L29 339V114zm296 225l-145 84v-50l21-12 124-72v50zm-147-23l100-58 43 26-144 84-23-13-72-42 44-26 49 29h3zm-53-152c-1 0-2 1-2 3v115l-6 3-38 22V139l20-11 74-43v51l-48 28zm201 1l-46 26 1-52 45-25v51zM456 319c0 2-2 3-4 3h-36c-2 0-3-1-3-3V212h-57v135c0 17 8 25 25 25h106c17 0 25-8 25-25V212h-56v107zm7 0V219h42v128c0 12-6 18-18 18H381c-12 0-18-6-18-18V219h43v100c0 7 3 10 10 10h36c7 0 11-3 11-10zM629 253h-47v76h47c7 0 10-4 10-11v-54c0-7-3-11-10-11zm3 65c0 2-1 4-3 4h-40v-62h40c2 0 3 2 3 4v54z" class="st0"/><path d="M665 210h-76v-50h-57v212h133c16 0 25-9 25-25V235c0-16-9-25-25-25zm17 137c0 12-6 18-17 18H539V167h43v50h83c11 0 17 6 17 18v112zM711 203h57v-43h-57v43zm7-35h43v28h-43v-28zM711 372h57V211h-57v161zm7-154h43v147h-43V218zM880 332l-4 1c-12 0-14-2-14-2l-1-10v-80h21v-42h-21v-42h-55v42h-21v42h21v94c0 11 3 20 9 25 8 8 22 12 43 12h5l20-1v-39h-3zm-17 32c-21 1-35-2-42-9-4-4-7-11-7-20V233h-21v-27h21v-41h39v41h20v27h-20v88c0 8 1 13 3 15s6 4 20 4v24h-13z" class="st0"/><script xmlns="">try {
+                        Object.defineProperty(screen, "availTop", { value: 0 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "availLeft", { value: 0 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "availWidth", { value: 1366 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "availHeight", { value: 768 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "colorDepth", { value: 24 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "pixelDepth", { value: 24 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(navigator, "hardwareConcurrency", { value: 8 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(navigator, "appVersion", { value: "5.0 (X11)" });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(navigator, "doNotTrack", { value: "unspecified" });
+                    } catch (e) {}
+                    
+            try {
+                window.screenY = 0
+            } catch (e) { }
+        
+            try {
+                window.screenTop = 0
+            } catch (e) { }
+        
+            try {
+                window.top.window.outerHeight = window.screen.height
+            } catch (e) { }
+        
+            try {
+                window.screenX = 0
+            } catch (e) { }
+        
+            try {
+                window.screenLeft = 0
+            } catch (e) { }
+        
+            try {
+                window.top.window.outerWidth = window.screen.width
+            } catch (e) { }
+        </script></svg>
