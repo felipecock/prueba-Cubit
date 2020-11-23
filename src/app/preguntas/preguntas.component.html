@@ -1,0 +1,32 @@
+<section class="main-section">
+    <header class="titulo-tema">
+      Titulo
+    </header>
+    <div class="pregunta">
+      <p class="pregunta">
+        El Arduino IDE no detecta el dispositivo Arduino conectado con cable
+        USB.
+      </p>
+    </div>
+    <div class="respuesta">
+      <p class="respuesta">
+        Otorgarle permisos al usuario <code>felipe</code> para leer y
+        escribir en el dispositivo ubicado en
+        <span class="ruta">/dev/ttyACM0</span> añadiéndolo al grupo
+        <code>dialout</code> mediante el comando:
+        <code class="bloque">sudo usermod -a -G dialout felipe</code>
+      </p>
+      <p class="respuesta">
+          Si el pregunta persiste desinstalar <code>brltty</code> (Programa para escritura
+          en braille que puede causar conflictos con el Arduino).
+      </p>
+      <p class="fuentes">(No reportada)</p>
+    </div>
+    <div class="etiquetas">
+      <p class="etiqueta">Arduino</p>
+      <p class="etiqueta">TTY</p>
+      <p class="etiqueta">USB</p>
+      <p class="etiqueta">Serial</p>
+      <p class="etiqueta">Kubuntu</p>
+    </div>
+  </section>

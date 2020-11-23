@@ -1,0 +1,146 @@
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background: var(--tema-color-relleno1);
+    margin: 2em 1em;
+    border-radius: 2em;
+    font-family: "Segoe UI";
+    font-size: 1.5em;
+}
+
+section::before {
+    display: block;
+    content: "";
+    margin-top: -10em;
+    padding-top: 10em;
+}
+
+section header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: var(--tema-color-header);
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+section p, section li {
+    margin:0;
+    color: var(--tema-color-p);
+    font-size: 1.1em;
+    margin: 0.7em 0;
+    /* padding: 0.5em 0em; */
+}
+
+section p.pregunta{
+    background-color: rgba(212, 60, 60, 0.8);
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+section div.pregunta::before {
+    display: block;
+    content: "Pregunta";
+    font-size: 1.5em;
+    background: none;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(212, 60, 60, 1);
+    /* padding-bottom: 0;
+    margin-bottom: 0; */
+}
+
+section div.respuesta::before {
+    display: block;
+    margin: 1em 0 0 0;
+    content: "Respuesta";
+    font-size: 1.5em;
+    background: none;
+    text-align: center;
+    color: rgb(128, 216, 128);
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    border-bottom: 0.1em solid rgb(128, 216, 128);
+}
+
+section span.ruta {
+    font-family: monospace;
+    color: rgb(255, 143, 38);
+}
+
+section code {
+    display: inline;
+    border: none;
+    margin: 0.25em;
+    padding: 0.25em;
+    font-family: monospace;
+    border-radius: 0.5em;
+    color: var(--tema-color-p);
+}
+
+
+section code.bloque {
+    display: block;
+    margin: 0.5em 0;
+    width: auto;
+    padding: 0.5em;
+    background: var(--tema-color-code);
+    border: 1px solid var(--tema-color-p);
+    overflow: auto;
+}
+
+section p.fuentes {
+    width: auto;
+    font-style: italic;
+    background: #fff5;
+    border-radius: 0.5em;
+    padding: 0.2em 1em;
+    margin-top: 1em;
+    overflow: auto;
+}
+
+section p.fuentes::before {
+    content: "Fuente: ";
+    font-weight: bold;
+}
+
+div.etiquetas {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5em 0;
+    justify-content: space-between;
+    background: #0008;
+    border-radius: 0.5em;
+    padding: 0.2em 1em;
+}
+
+section p.etiqueta {
+    font-weight: 200;
+    color: var(--tema-color-p);
+    padding: 0 1em;
+    margin: 0;
+    border-radius: 1em;
+}
+
+section p.etiqueta::before{
+    content: "#";
+}
+
+section p.etiqueta:hover {
+    color: rgb(116, 255, 255);
+    background-color: #fff3;
+}
+
+
+@media (max-width: 500pt) {
+
+    section div.etiquetas {
+        flex-direction: column;
+    }
+    
+    section p.etiqueta {
+        padding: 0 1em;
+        text-align: center;
+    }
+}

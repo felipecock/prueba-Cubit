@@ -2,7 +2,7 @@
     <h1>
       <img id="Logo-Cubit" src="./assets/favicon.svg" alt="The Cubit logo in grayscale and 3D light and shadows effect.">
       Cubit
-      <span class="subtítulo">Índice de Usuarios</span>
+      <span class="subtítulo">{{_pagina.obtener_pagina_actual()}}</span>
     </h1>
 </main>
-<app-lista-usuarios></app-lista-usuarios>
+<router-outlet></router-outlet>

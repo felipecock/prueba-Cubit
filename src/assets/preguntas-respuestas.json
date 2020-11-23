@@ -1,0 +1,35 @@
+[
+    {
+        "número" : "1",
+        "título" : "El Interceptor",
+        "pregunta": "¿Qué permite la implementación de un interceptor?",
+        "respuesta": "Respuesta...",
+        "ver-más" : "http://",
+        "etiquetas" : "Etiqueta"
+    },
+
+    {
+        "número" : "2",
+        "título" : "El Guard",
+        "pregunta": "¿Cuándo implementar un guard?",
+        "respuesta": "Respuesta...",
+        "ver-más" : "http://",
+        "etiquetas" : "Etiqueta"
+    },
+    {
+        "número" : "3",
+        "título" : "Las Pruebas",
+        "pregunta": "¿Qué es una prueba unitaria, una prueba de servicio y una prueba de componente?",
+        "respuesta": "Respuesta...",
+        "ver-más" : "http://",
+        "etiquetas" : "Etiqueta"
+    },
+    {
+        "número" : "4",
+        "título" : "La Interactividad de los Componentes",
+        "pregunta": "¿Cómo se manejan los estados de las variables dentro de un componente y las funcionalidades de los componentes como el OnInit?",
+        "respuesta": "Respuesta...",
+        "ver-más" : "http://",
+        "etiquetas" : "Etiqueta"
+    }
+]

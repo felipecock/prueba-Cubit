@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../servicios/api.service';
 import { InfoUsuario } from '../../modelos/tipos-datos';
+import { EstadoActualService } from 'src/app/home/estado-actual.service';
 
 @Component({
   selector: 'app-lista-usuarios',
@@ -12,7 +13,7 @@ export class ListaUsuariosComponent implements OnInit {
   listaUsuarios: Array<InfoUsuario> = [];
   errorHttp: Boolean = false;
 
-  constructor(private apiservice: ApiService) { }
+  constructor(private apiservice: ApiService, private pagina_actual:EstadoActualService) { }
 
   descargarListaUsuarios() {
     this.apiservice.getUsers().subscribe(
@@ -28,6 +29,7 @@ export class ListaUsuariosComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.pagina_actual.establecer_pagina_actual('Lista de Usuarios');
     this.descargarListaUsuarios();
   }
 }
