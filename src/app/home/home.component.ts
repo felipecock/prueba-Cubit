@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EstadoActualService } from './estado-actual.service';
+// import { EstadoActualService } from './estado-actual.service';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +8,8 @@ import { EstadoActualService } from './estado-actual.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public _pagina:EstadoActualService) { 
-  }
+  // constructor(public _pagina:EstadoActualService) { }
+  constructor() { }
 
   ngOnInit(): void {
 

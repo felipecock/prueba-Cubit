@@ -1,6 +1,13 @@
-<section class="main-section" *ngFor="let infoUsuario of listaUsuarios">
-  <header class="nombre-completo">
-    <span *ngIf="errorHttp">Error 404</span>
-    {{ infoUsuario.first_name }} {{ infoUsuario.last_name }}
-  </header>
-</section>
+<h1>
+  <span class="subtítulo">Lista de Usuarios</span>
+</h1>
+<ul>
+  <li *ngFor="let infoUsuario of listaUsuarios">
+    <a href="" class="main-section">
+      <header class="nombre-completo">
+        <span *ngIf="errorHttp">Error 404</span>
+        {{ infoUsuario.first_name }} {{ infoUsuario.last_name }}
+      </header>
+    </a>
+  </li>
+</ul>

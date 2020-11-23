@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<nav id="navbar" class="navbar" >
+  <header><a [routerLink]="['']" routerLinkActive="active">Cubit</a></header>
+  <ul>
+    <li>
+      <a [routerLink]="['/lista-usuarios']" class="nav-link" routerLinkActive="active"
+        >Lista de Usuarios</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/preguntas']" class="nav-link" routerLinkActive="active"
+        >Preguntas y Respuestas</a
+      >
+    </li>
+  </ul>
+</nav>

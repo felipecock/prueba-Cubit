@@ -1,7 +1,6 @@
-section {
+li {
     display: flex;
     flex-direction: column;
-    padding: 1em;
     background: var(--tema-color-relleno1);
     margin: 1em 1em;
     border-radius: 2em;
@@ -9,23 +8,28 @@ section {
     font-size: 1.5em;
 }
 
-section::before {
+/* a::before {
     display: block;
     content: "";
     margin-top: -7em;
     padding-top: 7em;
-}
+} */
 
-section header {
+a {
+    padding: 0.5em;
+    text-decoration-line: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.7em;
     font-weight: bold;
     color: var(--tema-color-header);
-    /* padding-bottom: 0.5em; */
     text-align: center;
 }
 
-section p, section li {
+a:hover {
+    background: rgba(var(--tema-color-relleno1), 0.5);
+}
+
+a p, a li {
     margin:0;
     color: var(--tema-color-p);
     font-size: 1.1em;

@@ -1,0 +1,99 @@
+#navbar {
+    position: fixed;
+    min-width: 250pt;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100vh;
+    background: #1115;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--tema-color-p);
+    padding: 0;
+}
+
+#navbar header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+}
+
+#navbar header a {
+    padding: 0;
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#navbar header a:hover {
+    text-shadow: 0 0 0.5em var(--tema-color-p);
+}
+
+#navbar ul {
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    overflow: auto;
+}
+
+#navbar li {
+    font-size: 2em;
+    color: var(--tema-color-p);
+    list-style: none;
+    background: #fff2;
+    margin: 0.25em 0;
+    /* text-align: center; */
+}
+
+#navbar li:active {
+    background: #fff4;
+}
+
+#navbar li:hover {
+    background: #fff5;
+}
+
+#navbar a {
+    padding: 0.5em;
+    display: block;
+    width: 100%;
+    color: var(--tema-color-p);
+    text-decoration: none;
+    text-align: center;
+}
+
+@media only screen and (min-width: 500pt) {
+    #navbar {
+        position: fixed;
+        min-width: 250pt;
+        top: 0px;
+        left: 0px;
+        width: 300px;
+        height: 100vh;
+        background: #1115;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--tema-color-p);
+        padding: 0;
+    }
+}
+
+@media (max-width: 500pt) {
+    #navbar {
+        position: absolute;
+        min-width: 250pt;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 30vh;
+        background: #1115;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--tema-color-p);
+        padding: 0;
+        border-bottom: 1em solid #1115
+    }
+
+    #navbar header {
+        font-size: 0.5em;
+    }
+}
