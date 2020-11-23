@@ -3,7 +3,7 @@
 </h1>
 <ul>
   <li *ngFor="let infoUsuario of listaUsuarios">
-    <a href="" class="main-section">
+    <a [routerLink]="['/detalle-usuario']" class="main-section">
       <header class="nombre-completo">
         <span *ngIf="errorHttp">Error 404</span>
         {{ infoUsuario.first_name }} {{ infoUsuario.last_name }}

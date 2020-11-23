@@ -55,7 +55,7 @@
 }
 
 #navbar a {
-    padding: 0.5em;
+    padding: 0.5em 0;
     display: block;
     width: 100%;
     color: var(--tema-color-p);

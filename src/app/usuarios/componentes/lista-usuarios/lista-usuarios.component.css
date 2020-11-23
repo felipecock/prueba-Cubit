@@ -6,6 +6,12 @@ li {
     border-radius: 2em;
     font-family: "Segoe UI";
     font-size: 1.5em;
+    list-style-type: none;
+}
+
+li:hover {
+    background: #0006;
+    box-shadow: 0 0 1em var(--tema-color-header);
 }
 
 /* a::before {
@@ -16,7 +22,7 @@ li {
 } */
 
 a {
-    padding: 0.5em;
+    padding: 0.5em 0;
     text-decoration-line: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.7em;
@@ -25,9 +31,6 @@ a {
     text-align: center;
 }
 
-a:hover {
-    background: rgba(var(--tema-color-relleno1), 0.5);
-}
 
 a p, a li {
     margin:0;
