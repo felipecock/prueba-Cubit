@@ -1,0 +1,23 @@
+<section class="main-section">
+  <div class="div-avatar">
+    <img class="foto-perfil" alt="Foto del usuario" src="{{ infoUsuario.avatar }}" />
+    <p class="div-avatar">
+      {{ infoUsuario.avatar }}
+    </p>
+  </div>
+  <header class="nombre-completo">
+    <span *ngIf="errorHttp">Error 404</span>
+    {{ infoUsuario.first_name }} {{ infoUsuario.last_name }}
+  </header>
+  <div class="identificación">
+    <p class="identificación">
+      <span *ngIf="errorHttp">No se obtuvo información del servidor.</span>
+      {{ infoUsuario.id }}
+    </p>
+  </div>
+  <div class="emails">
+    <p class="email">
+      {{ infoUsuario.email }}
+    </p>
+  </div>
+</section>
