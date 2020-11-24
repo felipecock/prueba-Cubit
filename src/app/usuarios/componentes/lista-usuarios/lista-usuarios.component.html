@@ -3,7 +3,15 @@
 </h1>
 <ul>
   <li *ngFor="let infoUsuario of listaUsuarios">
-    <a [routerLink]="['/detalle-usuario']" class="main-section">
+    <a
+      (click)="
+        claseCssCortina = 'visible';
+        claseCssCargando = 'visible';
+        seleccionarUsuario(infoUsuario.id)
+      "
+      [routerLink]="['/lista-usuarios']"
+      class="main-section"
+    >
       <header class="nombre-completo">
         <span *ngIf="errorHttp">Error 404</span>
         {{ infoUsuario.first_name }} {{ infoUsuario.last_name }}
@@ -11,3 +19,25 @@
     </a>
   </li>
 </ul>
+<div class="cortina" [ngClass]="claseCssCortina">
+  <div id="cargando" [ngClass]="claseCssCargando">
+    <br />
+  </div>
+  <dialog class="contenedor" open [ngClass]="claseCssDialogo">
+    <app-detalle-usuario
+      *ngIf="usuarioSeleccionado != 0"
+      [seleccionUsuario]="usuarioSeleccionado"
+    ></app-detalle-usuario>
+    <button
+      id="ok"
+      class="dato"
+      (click)="
+        claseCssCortina = 'oculto';
+        claseCssCargando = 'oculto';
+        claseCssDialogo = 'oculto'
+      "
+    >
+      Aceptar
+    </button>
+  </dialog>
+</div>

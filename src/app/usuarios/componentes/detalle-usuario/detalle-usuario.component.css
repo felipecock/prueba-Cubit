@@ -1,100 +1,99 @@
-section {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-    background: var(--tema-color-relleno1);
-    margin: 2em 1em;
-    border-radius: 2em;
-    font-family: "Segoe UI";
-    font-size: 1.5em;
+.contenedor {
+  display: block;
+  position: fixed;
+  top: 7%;
+  /* bottom: 7%; */
+  left: 50%;
+  right: 7%;
+  flex-direction: column;
+  padding: 1em;
+  margin: 0;
+  border-radius: 2em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.5em;
+  border: 0;
+  box-shadow: 0 0 1em var(--tema-color-relleno1);
 }
 
-section::before {
-    display: block;
-    content: "";
-    margin-top: -10em;
-    padding-top: 10em;
+.foto-perfil {
+  border-radius: 50%;
 }
 
-section header {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.7em;
-    font-weight: bold;
-    color: var(--tema-color-header);
-    padding-bottom: 0.5em;
-    text-align: center;
+header {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: var(--tema-color-h1);
+  padding-bottom: 0.5em;
+  text-align: center;
 }
 
-section p, section li {
-    margin:0;
-    color: var(--tema-color-p);
-    font-size: 1.1em;
-    margin: 0.7em 0;
-    /* padding: 0.5em 0em; */
+p {
+  margin: 0;
+  color: var(--tema-color-p);
+  font-size: 1.1em;
+  margin: 0.7em 0;
+  /* padding: 0.5em 0em; */
 }
 
-section p.div-avatar{
-    background-color: rgba(212, 60, 60, 0.8);
-    border-radius: 0.5em;
-    padding: 1em;
+.dato {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5em 0;
+  justify-content: space-between;
+  background: #fffa;
+  backdrop-filter: blur(1em);
+  border-radius: 1em;
+  padding: 0.2em 1em;
 }
 
-section div.div-avatar::before {
-    display: block;
-    font-size: 1.5em;
-    background: none;
-    text-align: center;
-    font-weight: bold;
-    color: rgba(212, 60, 60, 1);
-    /* padding-bottom: 0;
-    margin-bottom: 0; */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.651);
 }
 
-section div.identificación::before {
-    display: block;
-    margin: 1em 0 0 0;
-    content: "Identificación";
-    font-size: 1.5em;
-    background: none;
-    text-align: center;
-    color: rgb(128, 216, 128);
-    font-weight: bold;
-    padding-bottom: 0.5em;
-    border-bottom: 0.1em solid rgb(128, 216, 128);
+.dato p,
+.dato a {
+  font-weight: 200;
+  color: var(--tema-color-relleno1);
+  margin: 0;
+  text-decoration-line: none;
 }
 
-div.emails {
-    display: flex;
-    flex-direction: row;
-    margin: 0.5em 0;
-    justify-content: space-between;
-    background: #0008;
-    border-radius: 0.5em;
-    padding: 0.2em 1em;
+.dato p.etiqueta {
+  padding-right: 1em;
+  font-style: italic;
 }
 
-section p.email {
-    font-weight: 200;
-    color: var(--tema-color-p);
-    margin: 0;
+
+#ok {
+  border: 0.1em solid var(--tema-color-p);
+  display: block;
+  font-weight: bold;
+  color: var(--tema-color-p);
+  margin-top: 1em;
+  background: var(--tema-color-relleno1);
+  width: 100%;
+  font-size: 1em;
 }
 
-section p.email::before{
-    content: "#";
-}
-
-section p.email:hover {
-    color: rgb(116, 255, 255);
+#ok:hover {
+  background: var(--tema-color-p);
+  color: var(--tema-color-relleno1);
 }
 
 @media (max-width: 500pt) {
 
-    section div.emails {
-        flex-direction: column;
-    }
-    
-    section p.email {
-        padding: 0 1em;
-        text-align: center;
-    }
+  .contenedor {
+    left: 7%;
+  }
+
+  .contenedor div.datos {
+    flex-direction: column;
+  }
+
+  /* .contenedor p {
+    padding: 0 1em;
+    text-align: center;
+  } */
 }

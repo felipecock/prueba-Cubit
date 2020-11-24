@@ -1,31 +1,45 @@
-<dialog>
-  <!-- CONTENIDO DEL DIÁLOGO -->
+<header class="nombre-completo">
   <div class="div-avatar">
-    <img class="foto-perfil" alt="Foto del usuario" src="{{ infoUsuario.avatar }}" />
-    <p class="div-avatar">
-      {{ infoUsuario.avatar }}
-    </p>
+    <img
+      class="foto-perfil"
+      alt="Foto del usuario. (Origen:{{ infoUsuario.avatar }})"
+      src="{{ infoUsuario.avatar }}"
+    />
   </div>
-  <header class="nombre-completo">
-    <span *ngIf="errorHttp">Error 404</span>
-    {{ infoUsuario.first_name }} {{ infoUsuario.last_name }}
-  </header>
-  <div class="identificación">
-    <p class="identificación">
-      <span *ngIf="errorHttp">No se obtuvo información del servidor.</span>
-      {{ infoUsuario.id }}
-    </p>
-  </div>
-  <div class="emails">
-    <p class="email">
-      {{ infoUsuario.email }}
-    </p>
-  </div>
-</dialog>
+  <span *ngIf="errorHttp">Error 404</span>
+  {{ infoUsuario.first_name }} {{ infoUsuario.last_name }}
+</header>
 
-<!-- <mat-dialog-actions> -->
-  <!-- ACCIONES (GENERALMENTE BOTONES). BAJO EL CONTENIDO ALINEADAS -->
-<!-- </mat-dialog-actions> -->
-
-
-
+<div class="dato">
+  <p class="etiqueta">
+    Nombre(s):
+  </p>
+  <p class="valor" *ngIf="errorHttp">No se encontró en el servidor.</p>
+  <p class="valor">
+    {{ infoUsuario.first_name }}
+  </p>
+</div>
+<div class="dato">
+  <p class="etiqueta">
+    Apellido(s):
+  </p>
+  <p class="valor">
+    {{ infoUsuario.last_name }}
+  </p>
+</div>
+<div class="dato">
+  <p class="etiqueta">
+    Identificación:
+  </p>
+  <p class="valor">
+    {{ infoUsuario.id }}
+  </p>
+</div>
+<div class="dato">
+  <p class="etiqueta">
+    Email:
+  </p>
+  <p class="valor">
+    <a href="mailto:{{ infoUsuario.email }}" style="font-weight: bold;">{{ infoUsuario.email }}</a>
+  </p>
+</div>

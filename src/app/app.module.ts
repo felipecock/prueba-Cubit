@@ -12,7 +12,6 @@ import { UsuariosModule } from './usuarios/usuarios.module';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { EstadoActualService } from './home/estado-actual.service';
-import { DetalleUsuarioComponent } from './usuarios/componentes/detalle-usuario/detalle-usuario.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { DetalleUsuarioComponent } from './usuarios/componentes/detalle-usuario/
     HomeComponent,
     NavbarComponent,
     PreguntasComponent,
-    BienvenidoComponent,
-    DetalleUsuarioComponent
+    BienvenidoComponent
   ],
   imports: [
     BrowserModule,

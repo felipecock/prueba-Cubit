@@ -10,11 +10,19 @@ import { InfoUsuario } from '../../modelos/tipos-datos';
 })
 export class ListaUsuariosComponent implements OnInit {
 
-  listaUsuarios: Array<InfoUsuario> = [];
-  errorHttp: Boolean = false;
+  listaUsuarios:Array<InfoUsuario> = [];
+  errorHttp:boolean = false;
+  usuarioSeleccionado:number;
+  mostrarDialogo:boolean;
+  claseCssCortina:string = 'oculto';
+  claseCssCargando:string = 'oculto';
+  public claseCssDialogo:string = 'oculto';
 
   // constructor(private apiservice: ApiService, private pagina_actual:EstadoActualService) { }
-  constructor(private apiservice: ApiService) { }
+  constructor(private apiservice: ApiService) { 
+    this.usuarioSeleccionado = 0;
+    this.mostrarDialogo = false;
+  }
 
   descargarListaUsuarios() {
     this.apiservice.getUsers().subscribe(
@@ -34,6 +42,23 @@ export class ListaUsuariosComponent implements OnInit {
     //   "ngOnInit listausuarios.component.ts finalizado y servicio actualizado:" + 
     //   this.pagina_actual.obtener_pagina_actual().toString()
     //   )
-    this.descargarListaUsuarios();
+
+    if (this.usuarioSeleccionado == 0 ){
+      this.descargarListaUsuarios();
+    }
+  }
+
+  public seleccionarUsuario(id:number) {
+    this.usuarioSeleccionado = id;
+    // console.log(this.usuarioSeleccionado)
+  }
+
+  public obtenerId() {
+    // console.log(this.usuarioSeleccionado);
+    return this.usuarioSeleccionado;
+  }
+
+  public ocultarDialogo() {
+    this.mostrarDialogo = false;
   }
 }

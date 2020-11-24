@@ -12,7 +12,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --tema-color-inline-code: var(--tema-cian-color-inline-code);
 
     --tema-cian-color-fondo: linear-gradient(to right bottom, #23b33b, #1e4bad);
-    --tema-cian-color-relleno1: #000000AA;
+    --tema-cian-color-relleno1: #000000d0;
     --tema-cian-color-relleno2: #777777;
     --tema-cian-color-h1: #ffffff;
     --tema-cian-color-header: #ffffff;
