@@ -15,11 +15,15 @@ export class PreguntasComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarArchivo();
+    console.log('PyR');
+    console.log(this.preguntasYRespuestas);
   }
 
   cargarArchivo(){
-    this.http.get('asssets/preguntas-respuestas.json').subscribe(
-      (respuesta:any) => { this.preguntasYRespuestas = respuesta.json()}
-    )
+    this.http.get('assets/preguntas-respuestas.json').subscribe(
+      (respuesta:any) => { this.preguntasYRespuestas = respuesta}
+    );
   }
+
+  
 }
