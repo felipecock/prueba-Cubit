@@ -10,35 +10,44 @@ import { ListaUsuariosComponent } from '../lista-usuarios/lista-usuarios.compone
 })
 export class DetalleUsuarioComponent implements OnInit {
 
-  @Input() seleccionUsuario:number;
+  @Input() seleccionUsuario: number;
   infoUsuario: InfoUsuario;
   errorHttp: boolean = false;
 
-  constructor(private apiservice:ApiService, private listaUsuarios:ListaUsuariosComponent) {
-    this.infoUsuario = { id: 0, email: '', first_name: '', last_name: '', avatar: '' };
+  constructor(private apiservice: ApiService, private listaUsuarios: ListaUsuariosComponent) {
+    this.infoUsuario = { id: 0, email: '', first_name: '', last_name: '', avatar: './assets/profile-default.svg' };
     this.seleccionUsuario = 0;
   }
 
   descargarInfoUsuario(id: number) {
-    this.apiservice.getUser(id).subscribe(
-      respuesta => {
-        return this.infoUsuario = respuesta.data;
-      },
-      respuesta => {
-        return this.errorHttp = true;
-      }
-    );
-    console.log(this.infoUsuario);
-    console.log("ngOnInit. FIN");
+    if (id != 0) {
+      this.apiservice.getUser(id).subscribe(
+        respuesta => {
+          this.infoUsuario = respuesta.data;
+          this.listaUsuarios.claseCssDialogo = 'visible';
+          this.listaUsuarios.claseCssCargando = 'oculto';
+          return true;
+        },
+        respuesta => {
+          this.errorHttp = true;
+          this.listaUsuarios.claseCssDialogo = 'visible';
+          this.listaUsuarios.claseCssCargando = 'oculto';
+          return false;
+        }
+      );
+      console.log(this.infoUsuario);
+      console.log("ngOnInit. FIN");
+    }
+    this.infoUsuario.avatar = './assets/profile-default.svg';
+    return false;
   }
 
   ngOnInit() {
   }
-  
+
   ngOnChanges() {
+    this.infoUsuario.avatar = './assets/profile-default.svg';
     this.descargarInfoUsuario(this.seleccionUsuario);
-    this.listaUsuarios.claseCssDialogo = 'visible';
-    this.listaUsuarios.claseCssCargando = 'oculto';
   }
-  
+
 }

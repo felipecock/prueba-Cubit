@@ -1,20 +1,26 @@
+ul{
+  padding: 0;
+}
+
+
 li {
   display: flex;
   flex-direction: column;
-  background: var(--tema-color-relleno1);
   margin: 1em 1em;
-  border-radius: 2em;
-  font-family: "Segoe UI";
   font-size: 1.5em;
   list-style-type: none;
+  border-radius: 2em;
+  background-color: transparent;
 }
 
-li:hover {
-  background: #0006;
+a:hover {
+  background: #0005;
   box-shadow: 0 0 1em var(--tema-color-header);
 }
 
 a {
+  border-radius: 2em;
+  background: var(--tema-color-relleno1);
   padding: 0.5em 0;
   text-decoration-line: none;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -25,13 +31,33 @@ a {
   text-align: center;
 }
 
-a p,
-a li {
-  margin: 0;
-  color: var(--tema-color-p);
-  font-size: 1.1em;
-  margin: 0.7em 0;
-  /* padding: 0.5em 0em; */
+
+ul.paginav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.paginav a {
+  padding: 0.5em;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.555);
+  color: var(--tema-color-relleno1);
+}
+
+.paginav a.activa {
+  border: 0.2em solid var(--tema-color-p);
+}
+
+.paginav a:hover {
+  background: rgba(255, 255, 255, 0.87);
+  box-shadow: 0 0 0.5em var(--tema-color-p);
 }
 
 div.cortina {
@@ -40,7 +66,7 @@ div.cortina {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff7;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .contenedor {
@@ -97,9 +123,6 @@ dialog::backdrop {
   font-style: italic;
 }
 
-.contenedor p.email:hover {
-  color: rgb(116, 255, 255);
-}
 
 #ok {
   border: 0.1em solid var(--tema-color-p);
@@ -126,6 +149,8 @@ dialog::backdrop {
   margin: 40vh auto;
   margin: calc(50vh - 10em) auto;
 }
+
+
 
 @media (max-width: 500pt) {
   .contenedor {

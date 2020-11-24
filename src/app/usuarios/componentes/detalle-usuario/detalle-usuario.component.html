@@ -2,8 +2,9 @@
   <div class="div-avatar">
     <img
       class="foto-perfil"
-      alt="Foto del usuario. (Origen:{{ infoUsuario.avatar }})"
+      alt="Foto del usuario."
       src="{{ infoUsuario.avatar }}"
+      loading='lazy'
     />
   </div>
   <span *ngIf="errorHttp">Error 404</span>

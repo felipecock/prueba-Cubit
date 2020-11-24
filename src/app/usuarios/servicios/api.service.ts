@@ -12,9 +12,9 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  // Método para solicitarle al servidor la lista de usuarios
-  public getUsers(): Observable<HttpData> {
-    return this.http.get<HttpData>(this.ServerUrl + '/users');
+  // Método para solicitarle al servidor la lista de usuarios (p: página)
+  public getUsers(p:number): Observable<HttpData> {
+    return this.http.get<HttpData>(this.ServerUrl + '/users?page=' + p.toString());
   }
 
   // Método para solicitar la información detallada de un usuario en específico 

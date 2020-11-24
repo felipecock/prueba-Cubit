@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-// import { EstadoActualService } from '../home/estado-actual.service';
+import { tipoPYR } from '../usuarios/modelos/tipos-datos';
 
 @Component({
   selector: 'app-preguntas',
@@ -8,15 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreguntasComponent implements OnInit {
 
-  // constructor(private pagina_actual:EstadoActualService) { }
-  constructor() { }
+  preguntasYRespuestas: Array<tipoPYR> = [ ];
+
+  constructor( private http:HttpClient) { }
 
   ngOnInit(): void {
-    // this.pagina_actual.establecer_pagina_actual('Preguntas y Respuestas');
-    // this.pagina_actual.marcar_actualizado(true);
-    // console.log(
-    //   "ngOnInit preguntas.component.ts finalizado y servicio actualizado:" + 
-    //   this.pagina_actual.obtener_pagina_actual().toString()
-    //   )
+    this.cargarArchivo();
+  }
+
+  cargarArchivo(){
+    this.http.get('asssets/preguntas-respuestas.json').subscribe(
+      (respuesta:any) => { this.preguntasYRespuestas = respuesta.json()}
+    )
   }
 }

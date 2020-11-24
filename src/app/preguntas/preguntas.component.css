@@ -5,7 +5,8 @@ section {
     background: var(--tema-color-relleno1);
     margin: 2em 1em;
     border-radius: 2em;
-    font-family: "Segoe UI";
+    /* font-family: "Segoe UI"; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.5em;
 }
 
@@ -34,19 +35,21 @@ section p, section li {
 }
 
 section p.pregunta{
-    background-color: rgba(212, 60, 60, 0.8);
+    background-color: rgba(20, 201, 233, 0.459);
     border-radius: 0.5em;
     padding: 1em;
+    text-align: center;
+    font-weight: bold;
 }
 
 section div.pregunta::before {
     display: block;
     content: "Pregunta";
+    text-align: center;
     font-size: 1.5em;
     background: none;
-    text-align: center;
     font-weight: bold;
-    color: rgba(212, 60, 60, 1);
+    color: rgba(20, 201, 233, 0.699);
     /* padding-bottom: 0;
     margin-bottom: 0; */
 }
@@ -58,7 +61,7 @@ section div.respuesta::before {
     font-size: 1.5em;
     background: none;
     text-align: center;
-    color: rgb(128, 216, 128);
+    color: rgb(127, 241, 127);
     font-weight: bold;
     padding-bottom: 0.5em;
     border-bottom: 0.1em solid rgb(128, 216, 128);
