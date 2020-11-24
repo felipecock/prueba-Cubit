@@ -55,7 +55,6 @@ export class ListaUsuariosComponent implements OnInit {
 
   public Arreglar(length: number): Array<any> {
     if (length >= 0) {
-      console.log(new Array(length))
       return new Array(length);
     }
     return [];
