@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { LeerPreguntasService } from '../servicios/leer-preguntas.service';
 import { tipoPYR } from '../usuarios/modelos/tipos-datos';
 
 @Component({
@@ -11,17 +12,17 @@ export class PreguntasComponent implements OnInit {
 
   preguntasYRespuestas: Array<tipoPYR> = [ ];
 
-  constructor( private http:HttpClient) { }
+  constructor( private servicioPreguntas:LeerPreguntasService) { }
 
   ngOnInit(): void {
-    this.cargarArchivo();
-    console.log('PyR');
+    this.consultarPreguntas();
+    console.log('PyR:');
     console.log(this.preguntasYRespuestas);
   }
 
-  cargarArchivo(){
-    this.http.get('assets/preguntas-respuestas.json').subscribe(
-      (respuesta:any) => { this.preguntasYRespuestas = respuesta}
+  consultarPreguntas(){
+    this.servicioPreguntas.cargarArchivo().subscribe(
+      respuesta => { this.preguntasYRespuestas = respuesta}
     );
   }
 

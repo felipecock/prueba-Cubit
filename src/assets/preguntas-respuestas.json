@@ -1,35 +1,67 @@
 [
-    {
-        "numero" : "1",
-        "titulo" : "El Interceptor",
-        "pregunta": "¿Qué permite la implementación de un interceptor?",
-        "respuesta": "Respuesta...",
-        "verMas" : "http://",
-        "etiquetas" : ["Etiqueta", "Etiqueta", "Etiqueta"]
-    },
-
-    {
-        "numero" : "2",
-        "titulo" : "El Guard",
-        "pregunta": "¿Cuándo implementar un guard?",
-        "respuesta": "Respuesta...",
-        "verMas" : "http://",
-        "etiquetas" : ["Etiqueta", "Etiqueta", "Etiqueta"]
-    },
-    {
-        "numero" : "3",
-        "titulo" : "Las Pruebas",
-        "pregunta": "¿Qué es una prueba unitaria, una prueba de servicio y una prueba de componente?",
-        "respuesta": "Respuesta...",
-        "verMas" : "http://",
-        "etiquetas" : ["Etiqueta", "Etiqueta", "Etiqueta"]
-    },
-    {
-        "numero" : "4",
-        "titulo" : "La Interactividad de los Componentes",
-        "pregunta": "¿Cómo se manejan los estados de las variables dentro de un componente y las funcionalidades de los componentes como el OnInit?",
-        "respuesta": "Respuesta...",
-        "verMas" : "http://",
-        "etiquetas" : ["Etiqueta", "Etiqueta", "Etiqueta"]
-    }
+	{
+		"numero": "1",
+		"titulo": "El Interceptor",
+		"pregunta": "¿Qué permite la implementación de un interceptor?",
+		"respuesta": [
+			"En Angular se requiere tener o generar un servicio para implementar la interfaz HTTP Interceptor con el CLI de Angular, y realizar una petición de modificación con un header de tipo Authorization.",
+			"Para no tener que modificar y/o generar servicios en cada petición al API, por ejemplo, se le agrega un token al header a partir del local storage. Para implementarlo también se requeire que el interceptor esté dentro del array de providers."
+		],
+		"verMas": "https://angular.io/api/common/http/HttpInterceptor",
+		"etiquetas": [
+			"Interceptores",
+			"Tóken",
+			"Servicios",
+			"API"
+		]
+	},
+	{
+		"numero": "2",
+		"titulo": "El Guard",
+		"pregunta": "¿Cuándo implementar un guard?",
+		"respuesta": [
+			"Cuando uno no quiere tener que escribir código para permitir o negarle el acceso a la navegación. Es decir, los guard de Angular se usan cuando se quiere proteger ciertas rutas y se quiere dar permiso de ingreso bajo ciertas condiciones (por ejemplo el rol, que sean usuarios administradores o usuarios premium, etc.)"
+		],
+		"verMas": "https://angular.io/api/router",
+		"etiquetas": [
+			"Guard",
+			"Firewall",
+			"Routes/Rutas",
+			"Seguridad"
+		]
+	},
+	{
+		"numero": "3",
+		"titulo": "Las Pruebas",
+		"pregunta": "¿Qué es una prueba unitaria, una prueba de servicio y una prueba de componente?",
+		"respuesta": [
+			"Una prueba unitaria es una prueba aislada que consiste en probar fragmentos de código de forma que se puedan separar lógicamente, siempre y cuando no tenga recursos externos, como una base de datos. El objetivo de las pruebas unitarias es garantizar que todas las partes de un programa funciones y hagan lo que se espera de cada una.",
+			"Las pruebas de servicio, como parte del entorno de Angular, permiten verificar los servicios de forma aislada y ver la funcionalidad, seguridad, confiabilidad y rendimiento. Las pruebas unitarias son parte de las pruebas de servicio.",
+			"Las pruebas de componente permiten que se realicen como prueba unitaria de forma aislada, o en conjunto interactuando con dependencias (testbed)"
+		],
+		"verMas": "https://angular.io/guide/testing-services",
+		"etiquetas": [
+			"Pruebas",
+			"Isolation",
+			"Servicios",
+			"Componentes"
+		]
+	},
+	{
+		"numero": "4",
+		"titulo": "La Interactividad de los Componentes",
+		"pregunta": "¿Cómo se manejan los estados de las variables dentro de un componente y en las funcionalidades de los componentes como el OnInit?",
+		"respuesta": [
+			"Dentro de un componente se declaran las varaiables locales antes de la etiqueta del constructor, éstas sirven para almacenar datos y estados necesarios para la operatividad del componente. Sin embargo las asignaciones y lecturas de estas deben hacerse poe medio de funciones que pueden ser púiblicas o privadas.",
+			"Es importante tener en cuenta que para no romper el encasulamiento de los datos, que es una de las ventajas de Angular, debemos evitar el uso de variables globales, utilizando en cambio por ejemplo los servicios.",
+			"Como se trabaja muchas veces de forma asíncrona es mejor no dejarle muccha carga a la función OnInit que se ejecuta cada vez que se carga el componente y en vez de ello crear funciones externas para los procediientos que queremos.",
+			"Las variables y métodos de los componentes se deben acceder localmete utilizando el prefijo <this> para hacer referencia explícita a la pertenencia de estos elementos."
+		],
+		"verMas": "https://angular.io/api/core/OnInit",
+		"etiquetas": [
+			"OnInit",
+			"Estados de Variables",
+			"Estados"
+		]
+	}
 ]

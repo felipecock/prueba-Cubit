@@ -1,21 +1,20 @@
-<nav id="navbar" class="navbar" >
-  <header><a [routerLink]="['']" routerLinkActive="active">Cubit</a></header>
+<nav class="navbar" >
+  <header><a (click)="estiloCssSubmenu = 'submenu-oculto'" [routerLink]="['']" routerLinkActive="active">Cubit</a></header>
   <ul>
     <li>
-      <a [routerLink]="['/lista-usuarios']" class="nav-link" routerLinkActive="active"
+      <a (click)="estiloCssSubmenu = 'submenu-oculto'" [routerLink]="['/lista-usuarios']" class="nav-link" routerLinkActive="active"
         >Lista de Usuarios</a
       >
     </li>
     <li>
-      <a [routerLink]="['/preguntas']" class="nav-link" routerLinkActive="active"
+      <a (click)="alternarSubmenu()" [routerLink]="['/preg' + 'untas']" class="nav-link" routerLinkActive="active"
         >Preguntas y Respuestas</a
       >
     </li>
-    <!-- <li *ngFor="let numeral of preguntas.preguntasYRespuestas.length"> -->
-    <!-- <li>
-      <a [routerLink]="['/preguntas']" class="nav-link" routerLinkActive="active"
-        ></a
+    <li *ngFor="let numeral of numerales" [ngClass]="estiloCssSubmenu" >
+      <a href="preguntas#Pregunta{{numeral}}" class="nav-link" routerLinkActive="active"
+        >Pregunta {{ numeral }}</a
       >
-    </li> -->
+    </li>
   </ul>
 </nav>

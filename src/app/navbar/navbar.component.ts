@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { PreguntasComponent } from '../preguntas/preguntas.component';
+import { LeerPreguntasService } from '../servicios/leer-preguntas.service';
+import { tipoPYR } from '../usuarios/modelos/tipos-datos';
 
 @Component({
   selector: 'app-navbar',
@@ -9,10 +10,37 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   numerales:Array<number> = [];
-  constructor() { }
+  errorArchivo:boolean = false;
+  estiloCssSubmenu:string = 'submenu-oculto';
+  
+  constructor(private servicioPreguntas:LeerPreguntasService) { }
 
   ngOnInit(): void {
-    // this.numerales = this.preguntas.preguntasYRespuestas
+    this.consultarPreguntas();
+  }
+  
+  consultarPreguntas(){
+    this.servicioPreguntas.cargarArchivo().subscribe(
+      respuesta => { this.numerales = this.filtarNumerales(respuesta)},
+      respuesta => {this.errorArchivo = true}
+    );
+  }
+
+  filtarNumerales(objs:Array<tipoPYR>): Array<number>{
+    let nums:Array<number> = [];
+    for(let obj of objs){
+      nums.push(obj.numero);
+    }
+    return nums;
+  }
+
+  alternarSubmenu(){
+    if(this.estiloCssSubmenu == 'submenu-oculto'){
+      this.estiloCssSubmenu = 'submenu-visible';
+    }
+    else{
+      this.estiloCssSubmenu = 'submenu-oculto';
+    }
   }
 
 }

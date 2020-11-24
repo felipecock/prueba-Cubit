@@ -19,20 +19,31 @@
   </li>
 </ul>
 <ul class="paginav">
-  <li *ngFor="let i of Arreglar(listaUsuariosBloque.total_pages); index as numeroPagina">
+  <li
+    *ngFor="
+      let i of Arreglar(listaUsuariosBloque.total_pages);
+      index as numeroPagina
+    "
+  >
     <a
-      (click)="
-        descargarListaUsuarios(numeroPagina + 1);
-      "
+      (click)="descargarListaUsuarios(numeroPagina + 1)"
       [routerLink]="['/lista-usuarios']"
       [ngClass]="estaActiva(numeroPagina + 1)"
-
-    > {{numeroPagina + 1}} </a>
+    >
+      {{ numeroPagina + 1 }}
+    </a>
   </li>
 </ul>
 
-
-<div class="cortina" [ngClass]="claseCssCortina">
+<div
+  (click)="
+    claseCssCortina = 'oculto';
+    claseCssCargando = 'oculto';
+    claseCssDialogo = 'oculto'
+  "
+  class="cortina"
+  [ngClass]="claseCssCortina"
+>
   <div id="cargando" [ngClass]="claseCssCargando">
     <br />
   </div>
