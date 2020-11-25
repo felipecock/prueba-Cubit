@@ -1,6 +1,10 @@
 # PruebaCubit
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+
+GitHub websitee preview at https://felipecock.github.io/prueba-Cubit/
+
+
 ![alt text](https://github.com/felipecock/prueba-Cubit/blob/master/docs/Screenshot_2020-11-24%20PruebaCubit.png)
 
 ## Development server
