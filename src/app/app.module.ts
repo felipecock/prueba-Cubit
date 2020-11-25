@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { UsuariosModule } from './usuarios/usuarios.module';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { EstadoActualService } from './home/estado-actual.service';
+import { InterceptorService } from './servicios/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,12 @@ import { EstadoActualService } from './home/estado-actual.service';
     UsuariosModule
   ],
   providers: [
-    EstadoActualService
+    EstadoActualService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
