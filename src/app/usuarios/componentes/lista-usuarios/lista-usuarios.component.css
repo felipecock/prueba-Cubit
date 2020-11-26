@@ -140,8 +140,8 @@ dialog::backdrop {
 #cargando {
   width: 10em;
   height: 10em;
-  border-radius: 50%;
-  border: 4em dotted var(--tema-color-relleno1);
+  border-radius: 35%;
+  border: 1em solid var(--tema-color-relleno1);
   animation: 2s linear 0s infinite forwards running giro;
   margin: 40vh auto;
   margin: calc(50vh - 10em) auto;
