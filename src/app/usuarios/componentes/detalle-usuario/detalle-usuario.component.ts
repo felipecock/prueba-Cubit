@@ -46,8 +46,12 @@ export class DetalleUsuarioComponent implements OnInit {
   }
 
   ngOnChanges() {
-    this.infoUsuario.avatar = './assets/profile-default.svg';
-    this.descargarInfoUsuario(this.seleccionUsuario);
+    if (this.seleccionUsuario == 0) {
+      this.infoUsuario.avatar = './assets/profile-default.svg';
+    }
+    else {
+      this.descargarInfoUsuario(this.seleccionUsuario);
+    }
   }
 
 }

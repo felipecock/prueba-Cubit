@@ -151,7 +151,6 @@ dialog::backdrop {
   .contenedor {
     left: 7%;
   }
-
   .contenedor div.datos {
     flex-direction: column;
   }

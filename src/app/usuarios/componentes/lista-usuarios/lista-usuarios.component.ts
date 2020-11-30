@@ -11,7 +11,7 @@ export class ListaUsuariosComponent implements OnInit {
 
   listaUsuarios:Array<InfoUsuario> = [];
   errorHttp:boolean = false;
-  usuarioSeleccionado:number;
+  usuarioSeleccionado:number = 0;
   pagina:number = 1;
   listaUsuariosBloque:HttpData = {
     page: 1,
@@ -26,7 +26,7 @@ export class ListaUsuariosComponent implements OnInit {
   claseCssDialogo:string = 'oculto';
 
   constructor(private apiservice: ApiService) { 
-    this.usuarioSeleccionado = 0;
+    // this.usuarioSeleccionado = 0;
   }
 
   descargarListaUsuarios(_pagina:number) {
@@ -44,9 +44,10 @@ export class ListaUsuariosComponent implements OnInit {
   ngOnInit() {
     this.descargarListaUsuarios(this.pagina);
   }
-
+  
   public seleccionarUsuario(id:number) {
     this.usuarioSeleccionado = id;
+    console.log("El usuario seleccionado es el " + this.usuarioSeleccionado.toString());
   }
 
   public obtenerId() {
